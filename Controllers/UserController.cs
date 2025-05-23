@@ -18,6 +18,11 @@ public class UserController : Controller
             _userService.Add(new User { Name = "Carlos Ruiz", Email = "carlos.ruiz@email.com" });
             _userService.Add(new User { Name = "Maria Lopez", Email = "maria.lopez@email.com" });
             _userService.Add(new User { Name = "Pedro Sanchez", Email = "pedro.sanchez@email.com" });
+            _userService.Add(new User { Name = "Laura Torres", Email = "laura.torres@email.com" });
+            _userService.Add(new User { Name = "Miguel Castro", Email = "miguel.castro@email.com" });
+            _userService.Add(new User { Name = "Sofia Herrera", Email = "sofia.herrera@email.com" });
+            _userService.Add(new User { Name = "Diego Fernández", Email = "diego.fernandez@email.com" });
+            _userService.Add(new User { Name = "Lucia Martínez", Email = "lucia.martinez@email.com" });
         }
     }
 
