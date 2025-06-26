@@ -34,21 +34,19 @@ permissions:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    #runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
+
 
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install OpenSSL for .NET 5
-        run: sudo apt-get update && sudo apt-get install -y libssl
 
       - name: Set up .NET Core
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: ${{ env.DOTNET_VERSION }}
 
-      - name: Install libssl
-        run: sudo apt-get update && sudo apt-get install -y libssl-dev
         
       - name: Set up dependency caching for faster builds
         uses: actions/cache@v3
@@ -76,7 +74,9 @@ jobs:
   deploy:
     permissions:
       contents: none
-    runs-on: ubuntu-latest
+    #runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
+
     needs: build
     environment:
       name: 'Development'
