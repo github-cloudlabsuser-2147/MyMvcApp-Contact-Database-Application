@@ -44,6 +44,9 @@ jobs:
         with:
           dotnet-version: ${{ env.DOTNET_VERSION }}
 
+      - name: Install libssl
+        run: sudo apt-get update && sudo apt-get install -y libssl-dev
+        
       - name: Set up dependency caching for faster builds
         uses: actions/cache@v3
         with:
